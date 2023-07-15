@@ -13,7 +13,6 @@ import com.test.volvoxcase.R
 import com.test.volvoxcase.adapter.NewsAdapter
 import com.test.volvoxcase.databinding.FragmentNewsBinding
 import com.test.volvoxcase.model.Article
-import com.test.volvoxcase.model.NewsResponse
 import com.test.volvoxcase.viewmodel.NewsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -48,7 +47,6 @@ class NewsFragment : Fragment() {
                 swipeRefreshLayout.isRefreshing = false
             }
         }
-
     }
 
     fun fragmentNewsFetch() {

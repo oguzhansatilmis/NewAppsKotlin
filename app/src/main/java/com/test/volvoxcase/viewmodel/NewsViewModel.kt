@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class NewsViewModel @Inject constructor(private val repository :Repository) : ViewModel(){
+class NewsViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
     private val _newsResponseState = MutableStateFlow<Result<NewsResponse>>(Result.Loading())
 
@@ -20,6 +20,7 @@ class NewsViewModel @Inject constructor(private val repository :Repository) : Vi
     init {
         fetchData()
     }
+
     private fun fetchData() {
         viewModelScope.launch {
             _newsResponseState.value = Result.Loading()

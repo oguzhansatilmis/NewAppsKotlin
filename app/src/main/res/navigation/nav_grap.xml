@@ -5,15 +5,6 @@
     android:id="@+id/nav_grap"
     app:startDestination="@id/newsFragment">
     <fragment
-        android:id="@+id/mainFragment3"
-        android:name="com.test.volvoxcase.ui.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
-        <action
-            android:id="@+id/action_mainFragment3_to_newsFragment"
-            app:destination="@id/newsFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/newsFragment"
         android:name="com.test.volvoxcase.ui.NewsFragment"
         android:label="fragment_news"

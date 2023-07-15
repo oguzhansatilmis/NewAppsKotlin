@@ -5,14 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.webkit.WebViewFragment
 import androidx.core.view.doOnPreDraw
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
-import com.test.volvoxcase.R
 import com.test.volvoxcase.databinding.FragmentDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFragment : Fragment() {
     private lateinit var binding:FragmentDetailBinding
     private val args by navArgs<DetailFragmentArgs>()
@@ -33,13 +31,10 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         args.let {url->
-            println("detail fragment")
-            println(url)
+
             binding.detailWebview.loadUrl(url.url.toString())
         }
-
         (view.parent as? ViewGroup)?.doOnPreDraw {
-            // Parent has been drawn. Start transitioning!
             startPostponedEnterTransition()
         }
     }

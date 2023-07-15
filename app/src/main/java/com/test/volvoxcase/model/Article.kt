@@ -1,6 +1,5 @@
 package com.test.volvoxcase.model
 
-
 data class Article(
     val author: String,
     val content: String,
