@@ -37,7 +37,6 @@ class NewsAdapter @Inject constructor(private val newsList: List<Article>, priva
             itemCl.setOnClickListener {
                 onClickListener(position)
             }
-
         }
     }
 
